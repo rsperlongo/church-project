@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MEMBROS } from './membros-mock'
 
 @Component({
   selector: 'app-membros',
