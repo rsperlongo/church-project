@@ -18,7 +18,7 @@ export class MembrosComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelected(membros: Membros){
+  onSelect(membros: Membros){
     this.selectedMembros = membros;
   }
 

@@ -31,7 +31,7 @@
                   <td>{{ membro.nome  }}</td>
                   <td>{{ membro.telefone  }}</td>
                   <td>{{ membro.email  }}</td>
-                  <td><button type="button" class="btn btn-default waves-light" mdbWavesEffect> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Detalhes</button>
+                  <td><button type="button" (click)="onSelect(membro)"  class="btn btn-default waves-light" mdbWavesEffect> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Detalhes</button>
                     <button type="button" class="btn btn-danger waves-light" mdbWavesEffect><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
                   </td>
               </tr>
@@ -39,6 +39,9 @@
           <!--Table body-->
       </table>
       <!--Table-->
+      <app-membros-detalhes [membros]="selectedMembros"></app-membros-detalhes>
+      
+      </div> -->
   </div>
 </div>
 

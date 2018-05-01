@@ -10,6 +10,7 @@ import { MembrosComponent } from './membros/membros.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HeaderComponent } from './header/header.component';
+import { MembrosDetalhesComponent } from './membros-detalhes/membros-detalhes.component';
 
 
 
@@ -19,7 +20,8 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     LoginComponent,
     MembrosComponent,
-    HeaderComponent
+    HeaderComponent,
+    MembrosDetalhesComponent
   ],
   imports: [
     BrowserModule,
