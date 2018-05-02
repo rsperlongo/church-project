@@ -1,11 +1,15 @@
 <div *ngIf="membros">
 
-  <h2>{{ membros.nome | uppercase }} Details</h2>
-  <div><span>id: </span>{{membros.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="membros.nome" placeholder="name"/>
-    </label>
+  <div class="card">
+    <div class="card-header deep-orange lighten-1 white-text">
+      {{ membros.nome | uppercase }}
+    </div> 
   </div>
+      <li class="list-group-item"><h5><i class="fa fa-phone" aria-hidden="true"></i> {{ membros.telefone }}</h5></li>
+      <li class="list-group-item"><h5><i class="fa fa-envelope-o" aria-hidden="true"></i> {{ membros.endereco }}</h5></li>
+      <li class="list-group-item"><h5><i class="fa fa-at" aria-hidden="true"></i> {{ membros.email }}</h5></li>
+      <li class="list-group-item"><h5><i class="fa fa-at" aria-hidden="true"></i> {{ membros.data_nascimento }}</h5></li>
+      <li class="list-group-item"><h5><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> {{ membros.data_batismo }}</h5></li>
+</div> 
 
-</div>
+
