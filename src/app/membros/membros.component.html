@@ -6,11 +6,17 @@
 </div>
 <br>
 <div class="container">
+        <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Membros</li>
+                </ol>
+              </nav>
   <div class="row">
     <h2>Lista de membros</h2>
     <hr>
     <br>
-    <button type="button" class="btn btn-primary waves-light" mdbWavesEffect><i class="fa fa-plus" aria-hidden="true"></i> Adicionar Membro</button>
+    <button type="button" class="btn btn-primary waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()" mdbWavesEffect><i class="fa fa-plus" aria-hidden="true"></i> Adicionar Membro</button>
     <br>
       <table class="table table-hover">
           <thead class="mdb-color darken-3">
@@ -39,6 +45,59 @@
           <!--Table body-->
       </table>
       <!--Table-->
+      <div mdbModal #demoBasic="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100" id="myModalLabel">Adicionar Membro</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <div class="md-form">
+                                <i class="fa fa-user prefix"></i>
+                                <input mdbInputDirective type="text" id="form2" class="form-control">
+                                <label for="form2">Nome</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fa fa-phone prefix"></i>
+                                <input mdbInputDirective type="text" id="form2" class="form-control">
+                                <label for="form2">Telefone</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fa fa-envelope-o prefix"></i>
+                                <input mdbInputDirective type="text" id="form2" class="form-control">
+                                <label for="form2">Endereço</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fa fa-at prefix"></i>
+                                <input mdbInputDirective type="text" id="form2" class="form-control">
+                                <label for="form2">Email</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fa fa-calendar prefix"></i>
+                                <input mdbInputDirective type="text" id="form2" class="form-control">
+                                <label for="form2">Data de Nascimento</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fa fa-calendar-plus-o prefix"></i>
+                                <input mdbInputDirective type="text" id="form2" class="form-control">
+                                <label for="form2">Data de Batismo</label>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Fechar</button>
+                        <button type="submit" class="btn btn-primary btn-sm waves-light" mdbWavesEffect>Incluir Membro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
      <div class="container">
          
