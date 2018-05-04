@@ -12,7 +12,7 @@ export class MembrosService {
   constructor( private mensagensService: MensagensService) { }
 
   getMembros(): Observable<Membros[]> {
-    this.mensagensService.add('HeroService: fetched heroes');
+    this.mensagensService.add('Mensagem carregada!');
     return of(MEMBROS);
   }
 

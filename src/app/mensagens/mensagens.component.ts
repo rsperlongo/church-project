@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MensagensService } from '../mensagens.service';
 
 @Component({
   selector: 'app-mensagens',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MensagensComponent implements OnInit {
 
-  constructor() { }
+  constructor(public mensagensService: MensagensService) { }
 
   ngOnInit() {
   }
