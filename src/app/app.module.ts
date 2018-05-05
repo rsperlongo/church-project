@@ -16,6 +16,9 @@ import { MensagensComponent } from './mensagens/mensagens.component';
 import { MensagensService } from './mensagens.service';
 import { HttpClientModule } from '@angular/common/http';
 
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
 
 
 @NgModule({
@@ -32,7 +35,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot()
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    ),
+    MDBBootstrapModule.forRoot(),
+    
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [MembrosService, MensagensService],
