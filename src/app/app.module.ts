@@ -14,6 +14,7 @@ import { MembrosDetalhesComponent } from './membros-detalhes/membros-detalhes.co
 import { MembrosService } from './membros.service';
 import { MensagensComponent } from './mensagens/mensagens.component';
 import { MensagensService } from './mensagens.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -30,6 +31,7 @@ import { MensagensService } from './mensagens.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MDBBootstrapModule.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],

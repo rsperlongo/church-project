@@ -57,7 +57,7 @@
                     <div class="modal-body">
                             <div class="md-form">
                                 <i class="fa fa-user prefix"></i>
-                                <input mdbInputDirective type="text" id="form2" class="form-control">
+                                <input #membroNome mdbInputDirective type="text" id="form2" class="form-control">
                                 <label for="form2">Nome</label>
                             </div>
 
@@ -93,7 +93,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Fechar</button>
-                        <button type="submit" class="btn btn-primary btn-sm waves-light" mdbWavesEffect>Incluir Membro</button>
+                        <button type="submit" class="btn btn-primary btn-sm waves-light" mdbWavesEffect (click)="add(membroNome.value)" >Incluir Membro</button>
                     </div>
                 </div>
             </div>

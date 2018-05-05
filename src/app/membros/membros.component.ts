@@ -28,4 +28,11 @@ export class MembrosComponent implements OnInit {
         .subscribe( membros => this.membros = membros);
   }
 
+  add(nome: string, telefone: string, endereco: string, email: string, data_nascimento: any, data_batismo: any): void {
+    this.membrosService.addMembros({ nome } as Membros)
+        .subscribe(membros => {
+          this.membros.push();
+        })
+  }
+
 }
