@@ -22,7 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { fakeBackendProvider } from './_helpers/fake_backend';
 import { MockBackend } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
-import { AuthenticationService } from './_auth';
+import { AuthenticationService, UserService } from './_auth';
 import { AuthGuard } from './_guards';
 
 
@@ -52,6 +52,7 @@ import { AuthGuard } from './_guards';
   providers: [
     AuthGuard,
     AuthenticationService,
+    UserService,
     MembrosService, 
     MensagensService,
     fakeBackendProvider,
