@@ -22,23 +22,22 @@ export class LoginComponent implements OnInit {
                private authenticationService : AuthenticationService ) { 
     this.loginForm = fb.group({
       defaultFormUser: ['', Validators.required],
-      defaultFormPass: ['', Validators.required, Validators.minLength(6)]
+      defaultFormPass: ['', Validators.required]
     });
   }
 
   ngOnInit() {
-    this,this.authenticationService.logout();
+    this.authenticationService.logout();
   }
 
   login(){
-    this.loading = true;
     this.authenticationService.login(this.model.username, this.model.password)
         .subscribe(result => {
           if (result === true) {
             this.router.navigate([('/')]);
           } else {
             this.error = 'Usuário ou senha estão incorretos';
-            this.loading = false;
+       
           }
         });
   }

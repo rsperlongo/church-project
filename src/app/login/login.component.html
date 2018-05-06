@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col-md-6 offset-md-3">
-    <form [formGroup]="loginForm">
+    <form name="form" [formGroup]="loginForm" >
       <p class="h5 text-center mb-4">Login</p>
 
       <div class="md-form">
@@ -16,7 +16,7 @@
       </div>
 
       <div class="text-center">
-        <input type="submit" class="btn btn-default waves-light" mdbWavesEffect value="Login">
+        <input type="submit" (ngSubmit)="login()" class="btn btn-default waves-light" mdbWavesEffect value="Login">
       </div>
     </form>
   </div>
