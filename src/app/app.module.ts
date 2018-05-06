@@ -18,6 +18,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { fakeBackendProvider } from './_helpers/fake_backend';
+import { MockBackend } from '@angular/http/testing';
+import { BaseRequestOptions } from '@angular/http';
+import { AuthenticationService } from './_auth';
+import { AuthGuard } from './_guards';
 
 
 
@@ -35,6 +41,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
@@ -42,7 +49,15 @@ import { InMemoryDataService } from './in-memory-data.service';
     
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [MembrosService, MensagensService],
+  providers: [
+    AuthGuard,
+    AuthenticationService,
+    MembrosService, 
+    MensagensService,
+    fakeBackendProvider,
+    MockBackend,
+    BaseRequestOptions
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
