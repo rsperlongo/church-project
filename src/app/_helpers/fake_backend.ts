@@ -7,7 +7,7 @@ export let fakeBackendProvider = {
     useFactory: (backend: MockBackend, options: BaseRequestOptions) => {
      
         backend.connections.subscribe((connection: MockConnection) => {
-            let testUser = { username: 'teste', password: 'teste', firstName: 'Test', lastName: 'User' };
+            let testUser = { username: 'teste', password: 'teste', firstname: 'Test', lastname: 'User' };
 
             setTimeout(() => {
 
