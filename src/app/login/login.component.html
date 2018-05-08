@@ -5,18 +5,18 @@
 
       <div class="md-form">
         <i class="fa fa-user prefix grey-text"></i>
-        <input type="text" formControlName="defaultFormUser" id="defaultForm-user" class="form-control" mdbInputDirective>
+        <input type="text" formControlName="defaultFormUser" [(ngModel)]="model.username"  id="defaultForm-user" class="form-control" mdbInputDirective>
         <label for="defaultForm-user">Usuário</label>
       </div>
 
       <div class="md-form">
         <i class="fa fa-lock prefix grey-text"></i>
-        <input type="password" formControlName="defaultFormPass" id="defaultForm-pass" class="form-control" mdbInputDirective>
+        <input type="password" formControlName="defaultFormPass" [(ngModel)]="model.password" id="defaultForm-pass" class="form-control" mdbInputDirective>
         <label for="defaultForm-pass">Senha</label>
       </div>
 
       <div class="text-center">
-        <input type="submit" (ngSubmit)="login()" class="btn btn-default waves-light" mdbWavesEffect value="Login">
+        <input type="submit" (click)="login()" class="btn btn-default waves-light" mdbWavesEffect value="Login">
       </div>
     </form>
   </div>
