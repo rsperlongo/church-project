@@ -4,7 +4,7 @@ export class Membros {
     endereco: string;
     telefone: string;
     email: string;
-    data_nascimento: any;
-    data_batismo: any;
+    data_nascimento: string;
+    data_batismo: string;
 
 }

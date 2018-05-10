@@ -6,6 +6,8 @@ import { MensagensService } from './mensagens.service';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { pipe } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -31,7 +33,8 @@ export class MembrosService {
   }
 
   addMembros(membros: Membros): Observable<Membros[]>{
-    return this.http.post<Membros[]>(this.membrosUrl, membros, httpOptions);
+    return this.http.post<Membros[]>(this.membrosUrl, membros, httpOptions)
+    
   } 
 
 }
