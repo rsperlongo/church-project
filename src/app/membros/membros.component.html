@@ -56,45 +56,47 @@
                         </button>
                     </div>
                     <div class="modal-body">
+                        <form [formGroup]="addForm"> 
                             <div class="md-form">
                                 <i class="fa fa-user prefix"></i>
-                                <input #membroNome mdbInputDirective type="text" id="form2" class="form-control">
-                                <label for="form2">Nome</label>
+                                <input #membroNome mdbInputDirective type="text" formControlName="membroNome" class="form-control">
+                                <label for="membroNome">Nome</label>
                             </div>
 
                             <div class="md-form">
                                 <i class="fa fa-phone prefix"></i>
-                                <input #membroTelefone mdbInputDirective type="text" id="form2" class="form-control">
-                                <label for="form2">Telefone</label>
+                                <input #membroTelefone mdbInputDirective type="text"  formControlName="membroTelefone" class="form-control">
+                                <label for="membroTelefone">Telefone</label>
                             </div>
 
                             <div class="md-form">
                                 <i class="fa fa-envelope-o prefix"></i>
-                                <input #membroEndereco mdbInputDirective type="text" id="form2" class="form-control">
-                                <label for="form2">Endereço</label>
+                                <input #membroEndereco mdbInputDirective type="text" formControlName="membroEndereco" class="form-control">
+                                <label for="membroEndereco">Endereço</label>
                             </div>
 
                             <div class="md-form">
                                 <i class="fa fa-at prefix"></i>
-                                <input #membroEmail mdbInputDirective type="email" id="form2" class="form-control">
-                                <label for="form2">Email</label>
+                                <input #membroEmail mdbInputDirective type="email"  formControlName="membroEmail" class="form-control">
+                                <label for="membroEndereco">Email</label>
                             </div>
 
                             <div class="md-form">
                                 <i class="fa fa-calendar prefix"></i>
-                                <input #membroDataNascimento mdbInputDirective type="text" id="form2" class="form-control">
-                                <label for="form2">Data de Nascimento</label>
+                                <input #membroDataNascimento mdbInputDirective type="text" formControlName="membroDataNascimento" class="form-control">
+                                <label for="membroDataNascimento">Data de Nascimento</label>
                             </div>
 
                             <div class="md-form">
                                 <i class="fa fa-calendar-plus-o prefix"></i>
-                                <input #membroDataBatismo type="text" id="form2" class="form-control">
-                                <label for="form2">Data de Batismo</label>
+                                <input #membroDataBatismo type="text" name="membroDataBatismo" class="form-control">
+                                <label for="membroDataBatismo">Data de Batismo</label>
                             </div>
+                        </form>    
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Fechar</button>
-                        <button type="submit" class="btn btn-primary btn-sm waves-light" mdbWavesEffect (click)="add(membroNome.value, membroTelefone.value, membroEndereco.value, membroEmail.value, membroDataNascimento.value, membroDataBatismo.value )" >Incluir Membro</button>
+                        <button class="btn btn-primary btn-sm waves-light" mdbWavesEffect (click)="add( membroNome.value, membroTelefone.value, membroEndereco.value, membroEmail.value, membroDataNascimento.value, membroDataBatismo.value );membroNome.value=''; membroTelefone.value=''; membroEndereco.value=''; membroEmail.value=''; membroDataNascimento.value=''; membroDataBatismo.value='' " >Incluir Membro</button>
                     </div>
                 </div>
             </div>
