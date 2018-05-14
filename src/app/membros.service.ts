@@ -36,6 +36,10 @@ export class MembrosService {
     return this.http.post<Membros[]>(this.membrosUrl, membros, httpOptions)
     
   }
+
+  updateMembros(membros: Membros): Observable<any>{
+    return this.http.put(this.membrosUrl, membros, httpOptions);
+  }
   
   deleteMembros(membros: Membros | number): Observable<Membros>{
     const id = typeof membros === 'number' ? membros : membros.id;
