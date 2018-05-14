@@ -1,4 +1,4 @@
-<div *ngIf="membros">
+<!-- <div *ngIf="membros">
 
   <div class="card">
     <div class="card-header deep-orange lighten-1 white-text">
@@ -12,6 +12,49 @@
       <li class="list-group-item"><h5><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> {{ membros.data_batismo }}</h5></li>
 
       <app-mensagens></app-mensagens>
-</div> 
+</div>  -->
+<div *ngIf="membros">
+    <div class="card card-body">
+      <form [formGroup]="updateForm">
+      <div class="md-form">
+          <i class="fa fa-user prefix"></i>
+          <input [(ngModel)]="membros.nome" mdbInputDirective type="text" formControlName="membroNome" class="form-control">
+          <label for="nome">Nome</label>
+      </div>
+
+      <div class="md-form">
+          <i class="fa fa-phone prefix"></i>
+          <input [(ngModel)]="membros.telefone"  mdbInputDirective type="text" formControlName="membroTelefone"  class="form-control">
+          <label for="telefone">Telefone</label>
+      </div>
+
+      <div class="md-form">
+          <i class="fa fa-envelope-o prefix"></i>
+          <input [(ngModel)]="membros.endereco" mdbInputDirective type="text" formControlName="membroEndereco" class="form-control">
+          <label for="endereco">Endereço</label>
+      </div>
+
+      <div class="md-form">
+          <i class="fa fa-at prefix"></i>
+          <input [(ngModel)]="membros.email" mdbInputDirective type="email" formControlName="membroEmail" class="form-control">
+          <label for="email">Email</label>
+      </div>
+
+      <div class="md-form">
+          <i class="fa fa-calendar prefix"></i>
+          <input  [(ngModel)]="membros.data_nascimento" mdbInputDirective type="text" formControlName="membroDataNascimento" class="form-control">
+          <label for="data_nascimento">Data de Nascimento</label>
+      </div>
+
+      <div class="md-form">
+          <i class="fa fa-calendar-plus-o prefix"></i>
+          <input [(ngModel)]="membros.data_batismo" type="text" formControlName="membroDataNascimento" class="form-control">
+          <label for="data_batismo">Data de Batismo</label>
+      </div>
+    </form>
+      <a class="btn btn-deep-orange waves-light" (click)="save()" mdbWavesEffect>Salvar Alterações</a>  
+    </div>  
+</div>
+
 
 
