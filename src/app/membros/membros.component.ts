@@ -52,4 +52,9 @@ export class MembrosComponent implements OnInit {
         });
   }
 
+  delete(membros: Membros){
+    this.membros = this.membros.filter(m => m !== membros);
+    this.membrosService.deleteMembros(membros).subscribe();
+  }
+
 }

@@ -35,5 +35,12 @@ export class MembrosService {
   addMembros(membros: Membros): Observable<Membros[]>{
     return this.http.post<Membros[]>(this.membrosUrl, membros, httpOptions)
     
-  } 
+  }
+  
+  deleteMembros(membros: Membros | number): Observable<Membros>{
+    const id = typeof membros === 'number' ? membros : membros.id;
+    const url = `${this.membrosUrl}/${id}`;
+
+    return this.http.delete<Membros>(url, httpOptions);
+  }
 }
