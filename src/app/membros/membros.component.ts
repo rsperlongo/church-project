@@ -48,7 +48,7 @@ export class MembrosComponent implements OnInit {
   add(id: any, nome: string, telefone: string, endereco: string, email: string, data_nascimento: string, data_batismo: string): void {
     this.membrosService.addMembros({nome, telefone, endereco, email, data_batismo, data_nascimento } as Membros)
         .subscribe(membros => {
-          this.membros.push(id);
+          this.membros.push();
         });
   }
 

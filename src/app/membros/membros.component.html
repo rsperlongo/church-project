@@ -96,7 +96,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Fechar</button>
-                        <button class="btn btn-primary btn-sm waves-light" mdbWavesEffect (click)="add( membroNome.value, membroTelefone.value, membroEndereco.value, membroEmail.value, membroDataNascimento.value, membroDataBatismo.value );membroNome.value=''; membroTelefone.value=''; membroEndereco.value=''; membroEmail.value=''; membroDataNascimento.value=''; membroDataBatismo.value='' " >Incluir Membro</button>
+                        <button class="btn btn-primary btn-sm waves-light" mdbWavesEffect (click)="add(membroNome.value); membroNome.value=''" >Incluir Membro</button>
                     </div>
                 </div>
             </div>
