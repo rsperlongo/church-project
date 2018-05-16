@@ -23,6 +23,7 @@ export class MembrosComponent implements OnInit {
 
   createForm() {
     this.addForm = this.fb.group({
+      membroid: ['', Validators.required ],
       membroNome: ['', Validators.required ],
       membroTelefone: ['', Validators.required ],
       membroEndereco: ['', Validators.required ],
@@ -46,9 +47,9 @@ export class MembrosComponent implements OnInit {
   }
 
   add(id: any, nome: string, telefone: string, endereco: string, email: string, data_nascimento: string, data_batismo: string): void {
-    this.membrosService.addMembros({nome, telefone, endereco, email, data_batismo, data_nascimento } as Membros)
+    this.membrosService.addMembros({id, nome, telefone, endereco, email, data_batismo, data_nascimento } as Membros)
         .subscribe(membros => {
-          this.membros.push();
+          this.membros.push(id);
         });
   }
 

@@ -56,7 +56,12 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form [formGroup]="addForm"> 
+                        <form [formGroup]="addForm">
+                            <div class="md-form">
+                                <i class="fa fa-key prefix"></i>
+                                <input #membroid mdbInputDirective type="text" formControlName="membroid" class="form-control">
+                                <label for="membroid">ID</label>
+                            </div> 
                             <div class="md-form">
                                 <i class="fa fa-user prefix"></i>
                                 <input #membroNome mdbInputDirective type="text" formControlName="membroNome" class="form-control">
