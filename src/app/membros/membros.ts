@@ -1,5 +1,5 @@
 export class Membros {
-    id: any;
+    id: number;
     nome: string;
     endereco: string;
     telefone: string;

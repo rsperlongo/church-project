@@ -57,11 +57,11 @@
                     </div>
                     <div class="modal-body">
                         <form [formGroup]="addForm">
-                            <div class="md-form">
+                            <!-- <div class="md-form">
                                 <i class="fa fa-key prefix"></i>
                                 <input #membroid mdbInputDirective type="text" formControlName="membroid" class="form-control">
                                 <label for="membroid">ID</label>
-                            </div> 
+                            </div>  -->
                             <div class="md-form">
                                 <i class="fa fa-user prefix"></i>
                                 <input #membroNome mdbInputDirective type="text" formControlName="membroNome" class="form-control">
@@ -83,7 +83,7 @@
                             <div class="md-form">
                                 <i class="fa fa-at prefix"></i>
                                 <input #membroEmail mdbInputDirective type="email"  formControlName="membroEmail" class="form-control">
-                                <label for="membroEndereco">Email</label>
+                                <label for="membroEmail">Email</label>
                             </div>
 
                             <div class="md-form">
@@ -101,7 +101,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Fechar</button>
-                        <button class="btn btn-primary btn-sm waves-light" mdbWavesEffect (click)="add(membroNome.value); membroNome.value=''" >Incluir Membro</button>
+                        <button class="btn btn-primary btn-sm waves-light" mdbWavesEffect (click)="add(membroNome.value, membroTelefone.value, membroEmail.value, membroEndereco.value, membroDataNascimento.value, membroDataBatismo.value); membroNome.value=''; membroTelefone.value=''; membroEmail.value=''; membroEndereco.value=''; membroDataNascimento.value=''; membroDataBatismo.value " >Incluir Membro</button>
                     </div>
                 </div>
             </div>
