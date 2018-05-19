@@ -15,7 +15,7 @@
 </div>  -->
 <div *ngIf="membros">
     <div class="card card-body">
-      <form [formGroup]="updateForm">
+      <form [(formGroup)]="updateForm">
       <div class="md-form">
           <i class="fa fa-user prefix"></i>
           <input [(ngModel)]="membros.nome" mdbInputDirective type="text" formControlName="membroNome" class="form-control">
@@ -42,13 +42,13 @@
 
       <div class="md-form">
           <i class="fa fa-calendar prefix"></i>
-          <input  [(ngModel)]="membros.data_nascimento" mdbInputDirective type="text" formControlName="membroDataNascimento" class="form-control">
+          <input [(ngModel)]="membros.nascimento" mdbInputDirective type="text" formControlName="membroDataNascimento" class="form-control">
           <label for="data_nascimento">Data de Nascimento</label>
       </div>
 
       <div class="md-form">
           <i class="fa fa-calendar-plus-o prefix"></i>
-          <input [(ngModel)]="membros.data_batismo" type="text" formControlName="membroDataNascimento" class="form-control">
+          <input [(ngModel)]="membros.batismo" type="text" formControlName="membroDataNascimento" class="form-control">
           <label for="data_batismo">Data de Batismo</label>
       </div>
     </form>

@@ -17,7 +17,6 @@ export class MembrosDetalhesComponent implements OnInit {
 
   constructor( private route: ActivatedRoute,  
                private membrosService: MembrosService, 
-               private location: Location,
                private fb: FormBuilder) { 
                  this.createrForm();
                }
@@ -34,14 +33,14 @@ export class MembrosDetalhesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getMembro()
+    // this.getMembro()
   }
 
-  getMembro(): void {
+  /* getMembro(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.membrosService.getMembro(id)
     .subscribe(membros => this.membros = membros); 
-  }
+  } */
   // goBack(): void {
   //   this.location.back();
   // }

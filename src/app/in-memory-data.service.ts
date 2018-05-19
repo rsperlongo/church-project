@@ -9,8 +9,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 endereco: 'Rua Sebastião Lappetina Russo, 260',
                 telefone: '11 97722-0232',
                 email: 'ricardo_tadeu30@hotmail.com',
-                data_nascimento: '05/11/72',
-                data_batismo: '06/08/1990', 
+                nascimento: '05/11/1972',
+                batismo: '06/08/1990', 
             },
             { 
                 id: 12, 
@@ -18,8 +18,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 endereco: 'Rua Sebastião Lappetina Russo, 260',
                 telefone: '85 97772-7932',
                 email: 'carmemlopes2009@hotmail.com',
-                data_nascimento: '04/05/72',
-                data_batismo: '10/09/1995', 
+                nascimento: '04/05/1972',
+                batismo: '10/09/1995', 
             },
             { 
                 id: 13, 
@@ -27,8 +27,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 endereco: 'Rua Aeroporto de Macaé, 423',
                 telefone: '84 99545-0123',
                 email: 'isabelle_sperlongo@hotmail.com',
-                data_nascimento: '06/10/2005',
-                data_batismo: '02/01/2012', 
+                nascimento: '06/10/2005',
+                batismo: '02/01/2012', 
             },
         ];
         return {membros} ;

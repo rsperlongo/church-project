@@ -46,8 +46,8 @@ export class MembrosComponent implements OnInit {
         .subscribe( membros => this.membros = membros);
   }
 
-  add(id: number, nome: string, telefone: string, endereco: string, email: string, data_nascimento: string, data_batismo: string): void {
-    this.membrosService.addMembros({id, nome, telefone, endereco, email, data_batismo, data_nascimento } as Membros)
+  add(id: number, nome: string, telefone: string, endereco: string, email: string, nascimento: string, batismo: string): void {
+    this.membrosService.addMembros({ nome, telefone, endereco, email, batismo, nascimento } as Membros)
         .subscribe(membro => {
           this.membros.push();
         });
